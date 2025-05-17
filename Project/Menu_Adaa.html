@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adaa Menu</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="css/cart.js"></script>
+</head>
+<body>
+<header>
+    <h1>Checkout</h1>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="Cart.html">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+  <main>
+    <div class="menu-list-vertical">
+      <div class="menu-item">
+        <img src="images/raan_adaa.jpg" alt="Raan E Adaa">
+        <h4>Raan E Adaa (Leg of Lamb)</h4>
+        <p>Rs. 1900</p>
+        <button onclick="addToCart('Raan E Adaa', 1900)">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="images/murgh_tikka.jpg" alt="Zafrani Murgh Tikka">
+        <h4>Zafrani Murgh Tikka</h4>
+        <p>Rs. 1000</p>
+        <button onclick="addToCart('Murgh Tikka', 1000)">Add to Cart</button>
+      </div>
+      <!-- Add royal Awadhi dishes -->
+    </div>
+  </main>
+</body>
+</html>

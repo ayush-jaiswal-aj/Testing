@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bukhara Menu</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="css/cart.js"></script>
+</head>
+<body>
+<header>
+    <h1>Checkout</h1>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="Cart.html">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+  <main>
+    <div class="menu-list-vertical">
+      <div class="menu-item">
+        <img src="images/tandoori_chicken.jpg" alt="Tandoori Chicken">
+        <h4>Tandoori Chicken</h4>
+        <p>Rs. 1600</p>
+        <button onclick="addToCart('Tandoori Chicken', 1600)">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="images/seekh_kebab.jpg" alt="Seekh Kebab">
+        <h4>Seekh Kebab</h4>
+        <p>Rs. 1400</p>
+        <button onclick="addToCart('Seekh Kebab', 1400)">Add to Cart</button>
+      </div>
+      <!-- Add tandoor items -->
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yauatcha Menu</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="css/cart.js"></script>
+</head>
+<body>
+<header>
+    <h1>Checkout</h1>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="Cart.html">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+  </header>
+  <main>
+    <div class="menu-list-vertical">
+      <div class="menu-item">
+        <img src="images/venison_puff.jpg" alt="Venison Puff">
+        <h4>Venison Puff</h4>
+        <p>Rs. 850</p>
+        <button onclick="addToCart('Venison Puff', 850)">Add to Cart</button>
+      </div>
+      <div class="menu-item">
+        <img src="images/char_siu.jpg" alt="Char Siu Bao">
+        <h4>Char Siu Bao</h4>
+        <p>Rs. 750</p>
+        <button onclick="addToCart('Char Siu Bao', 750)">Add to Cart</button>
+      </div>
+      <!-- Add dim sum items -->
+    </div>
+  </main>
+</body>
+</html>
