@@ -1,0 +1,238 @@
+:root {
+    --primary-color: #04AA6D;
+    --dark-background: rgb(17, 17, 17);
+    --light-text: #ffffff;
+    --primary-section-bg: #000000;
+    --secondary-section-bg: #04AA6D;
+}
+
+body {
+    background-color: var(--dark-background);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--light-text);
+    box-sizing: border-box;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav li a {
+    display: block;
+    color: var(--light-text);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+nav .active {
+    background-color: var(--primary-color);
+}
+
+/* Typography */
+.site-title {
+    font-family: Cambria, serif;
+    font-size: 3em;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: Cambria, serif;
+    font-size: 2em;
+    color: inherit; /* Inherit color from parent section */
+}
+
+h3 {
+    font-family: Cambria, serif;
+    font-size: 2em;
+    color: var(--primary-color);
+    /* padding-left: 10.4cm; Keeping original padding if desired, but better to use flexbox for centering */
+}
+
+p {
+    font-size: 1em;
+}
+
+/* Buttons */
+button {
+    border-radius: 50px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1em;
+    margin: 20px 0; /* Add margin top/bottom */
+    cursor: pointer;
+    background-color: #26643B;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+button a {
+    text-decoration: none;
+    color: var(--light-text);
+}
+
+/* Event Showcase Sections */
+main {
+    padding: 20px;
+}
+
+.event-showcase {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    align-items: center;
+    padding: 30px;
+    margin: 20px auto; /* Center the blocks */
+    max-width: 1200px; /* Limit max width */
+    border-radius: 8px;
+    gap: 30px; /* Space between image and text */
+    box-sizing: border-box;
+}
+
+.primary-bg {
+    background-color: var(--primary-section-bg);
+    color: var(--primary-color); /* Text color for this background */
+}
+
+.secondary-bg {
+    background-color: var(--secondary-section-bg);
+    color: var(--secondary-background); /* Text color for this background */
+}
+
+.event-image-contact {
+    width: 100%; /* Full width by default */
+    max-width: 500px; /* Max width for image */
+    height: 300px; /* Fixed height for consistency */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.event-text-contact {
+    flex: 1; /* Allows text to take available space */
+    min-width: 300px; /* Ensures text doesn't get too small */
+    text-align: center;
+}
+
+/* Specific alignment for images */
+.event-showcase:nth-child(even) { /* For even-numbered sections (2nd, 4th, etc.) */
+    flex-direction: row-reverse; /* Swap image and text order */
+}
+
+/* Footer */
+.footer-main{
+	background: var(--primary-section-bg);
+	font: bold 16px sans-serif;
+	text-align: left;
+	padding: 30px 20px; /* Adjusted padding */
+    color:  var(--light-text);
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    gap: 20px; /* Space between sections */
+}
+
+.footer-main .footer-left,
+.footer-main .footer-right {
+    flex: 1 1 auto; /* Allow sections to shrink/grow based on content */
+    min-width: 250px; /* Ensure they don't get too small */
+    text-align: center; /* Center text within these divs */
+}
+
+.footer-main h3 {
+    margin: 0 0 10px;
+    color: var(--primary-color);
+    text-align: center; /* Ensure this is centered within its flex item */
+}
+
+.footer-main .copyright {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.footer-main .footer-right p {
+    margin: 5px 0;
+    text-align: center; /* Center contact info */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    .event-showcase {
+        flex-direction: column; /* Stack sections vertically */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .event-showcase:nth-child(even) {
+        flex-direction: column; /* Ensure they also stack */
+    }
+
+    .event-image-contact {
+        max-width: 100%; /* Images take full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-main .footer-right p {
+        text-align: center;
+    }
+
+    .site-title {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .site-title {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}

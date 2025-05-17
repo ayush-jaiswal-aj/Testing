@@ -1,0 +1,260 @@
+:root {
+    --primary-color: #04AA6D;
+    --dark-background: rgb(17, 17, 17);
+    --light-text: #ffffff;
+    --form-background: #000000;
+}
+
+body {
+    background-color: var(--dark-background);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--light-text);
+    box-sizing: border-box;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav li a {
+    display: block;
+    color: var(--light-text);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+nav .active {
+    background-color: var(--primary-color);
+}
+
+/* Typography */
+.site-title {
+    font-family: Cambria, serif;
+    font-size: 3em;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: Cambria, serif;
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-family: Cambria, serif;
+    font-size: 2em;
+    color: var(--primary-color);
+}
+
+/* Booking Form Section */
+main {
+    padding: 20px;
+}
+
+.booking-form-section {
+    background-color: var(--form-background);
+    color: var(--light-text);
+    padding: 40px;
+    margin: 20px auto; /* Center the form */
+    max-width: 800px; /* Limit form width */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+}
+
+.form-group {
+    margin-bottom: 25px; /* Space between form fields */
+    display: flex; /* Use flexbox for label and input alignment */
+    flex-direction: column; /* Stack label and input */
+}
+
+.form-group label {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: var(--primary-color); /* Label color */
+}
+
+input[type="text"],
+input[type="number"], /* Changed to number, though using pattern for phone */
+input[type="tel"], /* Correct type for phone number */
+input[type="email"],
+input[type="time"],
+input[type="date"],
+select {
+    background-color: var(--dark-background);
+    border: 1px solid var(--primary-color);
+    padding: 12px 15px;
+    height: auto; /* Auto height for better responsiveness */
+    color: var(--light-text);
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%; /* Take full width of parent */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #00ff8c; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(4, 170, 109, 0.5);
+}
+
+.radio-group label {
+    display: block; /* Make each radio option a block */
+    margin-bottom: 10px;
+    font-size: 1em; /* Adjust font size for radio labels */
+    color: var(--light-text); /* Ensure radio labels are visible */
+}
+
+.radio-group input[type="radio"] {
+    width: auto; /* Don't force full width for radios */
+    margin-right: 10px;
+}
+
+select {
+    appearance: none; /* Remove default select arrow */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2304AA6D%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.8-6.4H19.2c-6.8%200-13.5%203-17.7%208.2-4.3%205.2-4.9%2012.3-1.4%2018l128.2%20140.2c4.3%204.7%2010.5%207.1%2016.7%207.1s12.4-2.4%2016.7-7.1L288.4%2090.2c3.5-5.8%202.9-12.9-1.4-18.1z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+    padding-right: 30px; /* Make space for the arrow */
+}
+
+.submit-button {
+    width: 100%; /* Full width button */
+    padding: 15px;
+    font-size: 1.1em;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+}
+
+.submit-button:hover {
+    background-color: #00ff8c;
+}
+
+/* Footer */
+.footer-main{
+	background: var(--form-background);
+	font: bold 16px sans-serif;
+	text-align: left;
+	padding: 30px 20px; /* Adjusted padding */
+    color:  var(--light-text);
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    gap: 20px; /* Space between sections */
+}
+
+.footer-main .footer-left,
+.footer-main .footer-right {
+    flex: 1 1 auto; /* Allow sections to shrink/grow based on content */
+    min-width: 250px; /* Ensure they don't get too small */
+    text-align: center; /* Center text within these divs */
+}
+
+.footer-main h3 {
+    margin: 0 0 10px;
+    color: var(--primary-color);
+    text-align: center; /* Ensure this is centered within its flex item */
+}
+
+.footer-main .copyright {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.footer-main .footer-right p {
+    margin: 5px 0;
+    text-align: center; /* Center contact info */
+}
+
+/* Add to Book.css for JS validation feedback */
+input.error,
+select.error {
+    border-color: red !important; /* Highlight error fields */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5) !important;
+}
+
+.radio-group.error-border {
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    .booking-form-section {
+        padding: 30px;
+        margin: 15px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-main .footer-right p {
+        text-align: center;
+    }
+
+    .site-title {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .site-title {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .form-group label {
+        font-size: 1em;
+    }
+
+    input, select, button {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}

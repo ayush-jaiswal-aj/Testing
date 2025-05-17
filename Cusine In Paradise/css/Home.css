@@ -1,0 +1,347 @@
+:root {
+    --primary-color: #04AA6D;
+    --dark-background: rgb(17, 17, 17);
+    --light-text: #ffffff;
+    --secondary-background: #000000;
+}
+
+body {
+    background-color: var(--dark-background);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--light-text);
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+/* Header & Navigation */
+header {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex; /* Use flexbox for navigation */
+    justify-content: flex-start; /* Align items to the start */
+}
+
+nav li a {
+    display: block;
+    color: var(--light-text);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+nav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+nav .active {
+    background-color: var(--primary-color);
+}
+
+/* Typography */
+.site-title, .section-title {
+    font-family: Cambria, serif;
+    font-size: 3em; /* Use em for scalability */
+    color: var(--primary-color);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: Cambria, serif;
+    font-size: 2em;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-family: Cambria, serif;
+    font-size: 1.8em;
+    color: var(--primary-color);
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Buttons */
+button {
+    border-radius: 50px; /* Use px for fixed radius */
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1em;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #26643B;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #04AA6D;
+}
+
+button a {
+    text-decoration: none;
+    color: var(--light-text);
+}
+
+/* Sections Layout */
+main {
+    padding: 20px;
+}
+
+.hero-section {
+    background-color: var(--secondary-background);
+    display: flex; /* Use flexbox for hero section */
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    gap: 30px; /* Space between image and content */
+}
+
+.hero-image {
+    width: 100%; /* Default for small screens */
+    max-width: 600px; /* Max width for image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+.hero-content {
+    flex: 1; /* Allows content to take available space */
+    min-width: 300px; /* Ensures content doesn't get too squished */
+    color: var(--light-text);
+}
+
+.hero-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.chefs-speciality {
+    margin-bottom: 40px;
+}
+
+.speciality-intro {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 700px; /* Limit width for better readability */
+    border-radius: 8px;
+    text-align: center;
+}
+
+.speciality-items {
+    background-color: var(--secondary-background);
+    display: flex; /* Use flexbox for speciality items */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.speciality-item {
+    flex: 1 1 400px; /* Allows items to grow, shrink, with a base width of 400px */
+    max-width: 45%; /* Max width for two columns on larger screens */
+    text-align: center;
+    color: var(--light-text);
+}
+
+.speciality-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.speciality-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.speciality-item .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.speciality-item .description {
+    font-size: 1em;
+    color: #cccccc;
+    text-align: left; /* Align description text */
+}
+
+
+.events-section {
+    background-color: var(--secondary-background);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    gap: 30px;
+}
+
+.event-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.event-content {
+    flex: 1;
+    min-width: 300px;
+    color: var(--light-text);
+}
+
+.event-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer-main {
+    background: var(--secondary-background);
+    font: bold 16px sans-serif;
+    text-align: left;
+    padding: 30px 20px; /* Adjusted padding */
+    color: var(--light-text);
+    display: flex; /* Use flexbox for footer sections */
+    flex-wrap: wrap;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    gap: 20px; /* Space between sections */
+}
+
+.footer-main .footer-left,
+.footer-main .footer-right {
+    flex: 1 1 auto; /* Allow sections to shrink/grow based on content */
+    min-width: 250px; /* Ensure they don't get too small */
+    text-align: center; /* Center text within these divs */
+}
+
+.footer-main h3 {
+    margin: 0 0 10px;
+    color: var(--primary-color);
+    text-align: center; /* Ensure this is centered within its flex item */
+}
+
+.footer-main .copyright {
+    margin: 0;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.footer-main .footer-right p {
+    margin: 5px 0;
+    text-align: center; /* Center contact info */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    .hero-section,
+    .speciality-items,
+    .events-section,
+    .footer-main {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-image,
+    .event-image {
+        max-width: 100%; /* Images take full width on small screens */
+    }
+
+    .hero-content,
+    .event-content,
+    .speciality-item {
+        min-width: unset; /* Remove min-width constraint */
+        width: 100%; /* Take full width */
+    }
+
+    .speciality-item .description {
+        text-align: center; /* Center description on small screens */
+    }
+
+    .footer-main .footer-right p {
+        text-align: center; /* Center footer contact info */
+    }
+
+    .site-title {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .site-title {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    .hero-section,
+    .events-section,
+    .speciality-intro {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .footer-main {
+        padding: 30px 20px;
+    }
+}
