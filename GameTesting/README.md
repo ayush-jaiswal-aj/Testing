@@ -13,14 +13,10 @@ This framework supports:
 
 ## 🔍 Code Explanation
 
-### BaseTest.java
-
-Handles Appium driver setup and teardown using Android capabilities.
-
 ### GamePage.java
 
 Implements the Page Object Model. It provides methods like `tapStartButton()` and `tapTarget()` to simulate UI interactions.
 
-### GamePlayTest.java
+### GameTest.java
 
 TestNG test class that uses the GamePage object to perform tests like starting the game and tapping targets.
