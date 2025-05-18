@@ -60,23 +60,3 @@ To ensure the item count in the cart shown in the navbar updates correctly after
 
 * If count updates correctly ➜ **Test passes.**
 * If count does not update ➜ **Test fails, indicating logic/UI sync issue.**
-
----
-
-### ⚙️ **Why Selenium + TestNG?**
-
-* **Selenium WebDriver** is ideal for simulating real user interaction in browsers.
-* **TestNG** helps structure test cases, manage test lifecycles, and produce reports.
-* **EdgeDriver** is used since the tests are specifically targeted for Microsoft Edge.
-
----
-
-### 📂 **Structure Notes**
-
-* All test scripts are written in Java and can be executed from Eclipse.
-* Required assets like images should be correctly referenced in HTML and exist at the correct path.
-* The website is tested locally, so local file paths (`file:///`) are used in Selenium scripts.
-
----
-
-Let me know if you want this in a PDF/report format or included as JavaDoc or README.
