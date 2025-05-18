@@ -8,8 +8,7 @@ import org.testng.annotations.*;
 import java.io.File;
 import java.time.Duration;
 
-public class ContactPageTest {
-
+public class Test {
     WebDriver driver;
 
     @BeforeClass
@@ -23,17 +22,12 @@ public class ContactPageTest {
     public void testBookNowButtonPresenceAndNavigation() throws InterruptedException {
         driver.get(getLocalPagePath("resources/Contact.html"));
 
-        // Check if the "Book Now" button is displayed
         WebElement bookNowButton = driver.findElement(By.xpath("//button[contains(text(),'Book Now')]"));
         Assert.assertTrue(bookNowButton.isDisplayed(), "'Book Now' button is not displayed.");
 
-        // Click the button
         bookNowButton.click();
-
-        // Allow some time for redirection
         Thread.sleep(2000);
 
-        // Assert redirection to Book.html
         String currentUrl = driver.getCurrentUrl();
         Assert.assertTrue(currentUrl.endsWith("Book.html"), "Navigation to Book page failed!");
     }
@@ -45,7 +39,6 @@ public class ContactPageTest {
         }
     }
 
-    // Utility method to generate file:// path from local file
     private String getLocalPagePath(String relativePath) {
         File file = new File(relativePath);
         return "file:///" + file.getAbsolutePath().replace("\\", "/");
