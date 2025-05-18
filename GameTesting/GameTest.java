@@ -5,7 +5,6 @@ import org.testng.annotations.*;
 import pages.GamePage;
 
 public class GamePlayTest extends BaseTest {
-
     GamePage gamePage;
 
     @BeforeMethod
@@ -18,7 +17,7 @@ public class GamePlayTest extends BaseTest {
     public void testTargetHitAndScoreUpdate() {
         gamePage.tapStartButton();
         assert gamePage.isScoreVisible();
-        gamePage.tapTarget(); // Tap one of the spawned targets
+        gamePage.tapTarget();
     }
 
     @AfterMethod
