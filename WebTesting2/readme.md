@@ -1,6 +1,7 @@
-### 📌 **Project Overview**
+📌 **Project Overview**
 
-**Title:** Automated Functional Testing for "Cuisine In Paradise" Web Application
+**Title:** Automated Functional Testing for "Online Food Delivery" Web Application
+
 **Tech Stack:**
 
 * **Frontend:** HTML, CSS, JavaScript
