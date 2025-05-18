@@ -1,7 +1,3 @@
-Here’s a clear and detailed explanation you can write or present to others, outlining the **goals**, **technologies used**, and **testing logic** for your project:
-
----
-
 ### 📌 **Project Overview**
 
 **Title:** Automated Functional Testing for "Cuisine In Paradise" Web Application
