@@ -2,7 +2,7 @@ Selenium WebSite Testing for the small html website project "Cusine In Paradise"
 
 Automated Testing for Restaurant Management Website using Selenium & TestNG (Java + EdgeDriver + Eclipse)
 
-Two test script:
+**Two test script:**
 1. Booking functionality on the "Book.html" page.
 2. Navigation functionality on the "Contact.html" page.
 
