@@ -10,7 +10,6 @@ def test_start_game():
     assert driver.find_object(By.NAME, 'Player') is not None
 
 def test_avoid_obstacle():
-    # Simulate swipe/jump or move logic
     driver.press_key('ArrowRight')
     time.sleep(1)
     assert driver.find_object(By.NAME, 'Obstacle') is not None
