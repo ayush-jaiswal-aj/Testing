@@ -3,7 +3,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.*;
 
-public class HomeBackgroundImageTest {
+public class Test2 {
     WebDriver driver;
 
     @BeforeClass
